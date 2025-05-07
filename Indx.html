@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAYMENT RAPZ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PAYMENT RAPZ</h1>
+
+    <div class="method" onclick="copyNumber('089529592500')">
+      <img src="https://files.catbox.moe/x1tw8u.jpeg" alt="DANA" class="logo">
+      <div class="method-text">
+        <h2>DANA</h2>
+        <p>089529592500</p>
+      </div>
+    </div>
+
+    <div class="method" onclick="copyNumber('089529592500')">
+      <img src="https://files.catbox.moe/4lsigv.png" alt="GoPay" class="logo">
+      <div class="method-text">
+        <h2>GoPay</h2>
+        <p>089529592500</p>
+      </div>
+    </div>
+
+    <div class="method qr-section" onclick="toggleQR(this)">
+      <img src="https://files.catbox.moe/s939xj.png" alt="QRIS" class="logo">
+      <div class="method-text">
+        <h2>QRIS</h2>
+        <p>Klik untuk tampilkan kode QR</p>
+      </div>
+      <img src="https://files.catbox.moe/v0lglt.jpg" alt="QRIS RAPZ" class="qr-img">
+    </div>
+
+    <footer>&copy; 2025 Payment RAPZ - All rights reserved.</footer>
+  </div>
+
+  <script>
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number).then(() => {
+        alert("Nomor " + number + " telah disalin ke clipboard.");
+      });
+    }
+
+    function toggleQR(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
